@@ -7,54 +7,45 @@ var tableRow = document.createElement('tr');
 
 tableEle.appendChild(tableHeader)
 
-for (var i=0; i < hours.length; i++) {
+for (var i = 0; i < hours.length; i++) {
     var tableCell = document.createElement('th');
     tableCell.innerText = hours[i]
     tableHeader.appendChild(tableCell)
 }
-function Locations(name, id, minCust, maxCust, avgCookies) {
+function Location(name, minCust, maxCust, avgCookies) {
     this.name = name;
-    this.id = id;
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.avgCookies = avgCookies;
     this.cookiesPerHr = [];
 };
-Locations.prototype.render = function() {
-        var tableRow = document.createElement('tr');
-        tableEle.appendChild(tableRow)
-    for (var i=0; i < hours.length; i++) {
+Location.prototype.render = function () {
+    var tableRow = document.createElement('tr');
+    tableEle.appendChild(tableRow)
+    for (var i = 0; i < hours.length; i++) {
         var tableCell = document.createElement('td');
-        if (i===0) {
+        if (i === 0) {
             tableCell.innerText = this.name
             tableRow.appendChild(tableCell)
         }
         else {
             tableCell.innerText = this.cookiesPerHr[i]
             tableRow.appendChild(tableCell)
-            console.log (1)
-
         }
     }
 }
-Locations.prototype.custPerHrFn = function() {
+Location.prototype.custPerHrFn = function () {
     var randCust = Math.floor(Math.random() * this.maxCust + this.minCust);
     return randCust;
 
 }
 
-Locations.prototype.calculateCookiesPerHr= function() {
-    for (var i =0; i < hours.length; i++) {
+Location.prototype.calculateCookiesPerHr = function () {
+    for (var i = 0; i < hours.length; i++) {
         this.cookiesPerHr.push(Math.floor(this.custPerHrFn() * this.avgCookies));
-        console.log(this.cookiesPerHr)
+        console.log(this.avgCookies)
     }
 }
-
-Locations.prototype.cookiePopulator= function () {
-    this.calculateCookiesPerHr();
-    var locationCookies = document.getElementById(this.id);
-    locationCookies.innerText= this.name;
-    }
 
 function createCell(id, cellType, content, row) {
     var row = document.getElmentById(id)
@@ -63,23 +54,44 @@ function createCell(id, cellType, content, row) {
     row.appendChild(cell);
 }
 
-var locationOne = new Locations('PDX Airport', 'PDX-Airport', 23, 65, 6.3);
-locationOne.cookiePopulator()
+var locationOne = new Location('PDX Airport', 23, 65, 6.3);
+locationOne.calculateCookiesPerHr()
 locationOne.render()
 
-var locationTwo = new Locations('Pioneer Square','Pioneer-Square', 3, 24, 1.2);
-locationTwo.cookiePopulator()
+var locationTwo = new Location('Pioneer Square', 3, 24, 1.2);
+locationTwo.calculateCookiesPerHr()
 locationTwo.render()
 
-var locationThree = new Locations('Powell\'s', 'Powells', 11, 38, 3.7);
-locationThree.cookiePopulator()
+var locationThree = new Location('Powell\'s', 11, 38, 3.7);
+locationThree.calculateCookiesPerHr()
 locationThree.render()
 
-var locationFour = new Locations('St. John\'s', 'St.Johns', 20, 38, 2.3);
-locationFour.cookiePopulator()
+var locationFour = new Location('St. John\'s', 20, 38, 2.3);
+locationFour.calculateCookiesPerHr()
 locationFour.render()
 
-var locationFive = new Locations('Waterfront', 'Waterfront', 2, 16, 4.6);
-locationFive.cookiePopulator()
+var locationFive = new Location('Waterfront', 2, 16, 4.6);
+locationFive.calculateCookiesPerHr()
 locationFive.render()
+
+//Adding new locations from the form 
+
+var newLocation = document.getElementById('addLocation');
+newLocation.addEventListener('submit', addNewLocation);
+
+function addNewLocation() {
+    event.preventDefault();
+    var form = event.target;
+    var name = form.storeName.value;
+    var minimumCust = parseInt(form.minimumCust.value);
+    var maximumCust = parseInt(form.maximumCust.value);
+    var averageCookies = parseInt(form.averageCookies.value);
+    console.log(form, name, minimumCust, maximumCust, averageCookies);
+    var newLocation = new Location(name, minimumCust, maximumCust, averageCookies);
+    console.log(newLocation);
+
+    newLocation.calculateCookiesPerHr();
+    console.log(newLocation.calculateCookiesPerHr());
+    newLocation.render();
+}
 
