@@ -6,7 +6,7 @@
        z-index: 2;
 }
 
-#About, #Locations, #salmonImage, #FAQ, #Contact {
+#About, #Locations, #salmonImage, #Store, #Contact {
    width: 200px;
    display: inline-block;
    float: right;
