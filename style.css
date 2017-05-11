@@ -1,27 +1,32 @@
-header {
+
+
+#navbar {
        display: flex;
+       justify-content: center;
        z-index: 2;
 }
 
-header > div {
+#About, #Locations, #salmonImage, #FAQ, #Contact {
    width: 200px;
    display: inline-block;
    float: right;
+   font-family: 'Open Sans', sans-serif;
    /*border: solid black 3px;*/
 }
 h4 {
     display: inline-block;
-    /*border: solid black 3px;*/
 }
 
 #salmonImage {
    width: 400px;
    height: auto;
+   display: flex;
+   /*z-index: 2;*/
    /*border: solid black 3px;*/
    /*z-index: 2;*/
 }
 
-body {
+#index {
   display: flex;
   flex-direction: column;
 }
@@ -38,4 +43,17 @@ body {
     /*border: solid black 3px;*/
     margin: -50px 0 0 0;
     /*z-index: 1;*/
+}
+
+#aboutBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aboutHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
