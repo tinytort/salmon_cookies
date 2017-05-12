@@ -124,6 +124,7 @@ h1 {
 #contactImgs {
     display: flex;
     justify-content: center;
+
 }
 
 #email, #phone, #home {
@@ -135,6 +136,7 @@ h1 {
 
 #info {
     margin: 0 0 0 70px;
+
 }
 
 h3 {
