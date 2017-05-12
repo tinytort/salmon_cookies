@@ -1,0 +1,153 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    background-color: #e1e7f2;
+
+}
+
+#shopP {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+#shopImages {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#shopImages > img {
+    max-height: 250px;
+    max-width: 250px;
+    padding: 0px;
+    border-radius: 300%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#shopPricing {
+    display: flex;
+    justify-content: center;
+}
+
+#CC, #BO, #indC, #PT {
+    /*display: flex;
+    justify-content: center;
+    padding: 30px;
+    flex-direction: row;*/
+    width: 200px;
+   display: inline-block;
+   float: right;
+   font-family: 'Permanent Marker', cursive;
+   text-align: center;
+   padding: 50px;
+   font-size: 20px;
+}
+
+#shopPrices {
+    display: flex;
+}
+
+#six, #call, #two, #fifteen {
+    width: 200px;
+   display: inline-block;
+   float: right;
+   font-family: 'Permanent Marker', cursive;
+   text-align: center;
+   padding: 60px;
+   font-size: 20px;
+   margin: -120px 0 0 0;
+}
+
+#familyPhoto {
+    max-height: 250px;
+    max-width: 250px;
+    padding: 0px;
+    border-radius: 500%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutFamily {
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#aboutContent {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#aboutContent > p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#locationBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#allLocations {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+#locationBody > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#allLocations > div > img {
+    max-height: 250px;
+    max-width: 220px;
+    padding: 10px;
+    border-radius: 300%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+
+#contactImgs {
+    display: flex;
+    justify-content: center;
+}
+
+#email, #phone, #home {
+    max-height: 100px;
+    margin: 50px;
+    padding: 100px;
+  
+}
+
+#info {
+    margin: 0 0 0 70px;
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+#locationBody > h1 {
+    margin: 20px 0 40px 0;
+}
+
+#hours {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+}

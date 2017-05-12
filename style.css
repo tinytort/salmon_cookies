@@ -1,0 +1,131 @@
+/** {
+    display: flex;
+}*/
+
+#navBar {
+       display: flex;
+       justify-content: center;
+       z-index: 2;
+}
+
+#navBar h4 {
+    text-align: center;
+}
+
+#About, #Locations, #salmonImage, #Shop, #Contact {
+   width: 200px;
+   display: inline-block;
+   float: right;
+   font-family: 'Open Sans', sans-serif;
+   text-align: center;
+}
+h4 {
+    display: inline-block;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+#salmonImg {
+   width: auto;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   z-index: 2;
+   margin: -185px 0 0 0;
+}
+
+#index {
+  display: flex;
+  flex-direction: column;
+}
+
+#backgroundimg {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    font-family: 'Permanent Marker' , cursive;
+    /*background: url(./images/background.jpg);*/
+}
+
+#logoTest {
+     display: flex;
+     background: url(./images/background.jpg);
+     background-size: 100%;
+     justify-content: center;
+     min-height: 500px;
+     width: 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+     font-size: 100px;
+ 
+}
+
+.pnw {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    margin: -50px 0 0 0;
+}
+
+#aboutBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aboutHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+
+}
+
+#locationBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#allLocations {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+#locationBody > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#allLocations > div > img {
+    max-height: 250px;
+    max-width: 250px;
+    padding: 0px;
+    border-radius: 300%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
+#logo > h1 {
+    font-family: 'Permanent Marker' , cursive;
+    z-index: 2;
+}*/
+
+#logoTest {
+     font-family: 'Permanent Marker' , cursive;
+}
