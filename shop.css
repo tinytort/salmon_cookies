@@ -90,3 +90,64 @@ h1 {
 #aboutContent > p {
     font-family: 'Open Sans', sans-serif;
 }
+
+#locationBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#allLocations {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+#locationBody > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#allLocations > div > img {
+    max-height: 250px;
+    max-width: 220px;
+    padding: 10px;
+    border-radius: 300%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+
+#contactImgs {
+    display: flex;
+    justify-content: center;
+}
+
+#email, #phone, #home {
+    max-height: 100px;
+    margin: 50px;
+    padding: 100px;
+  
+}
+
+#info {
+    margin: 0 0 0 70px;
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+#locationBody > h1 {
+    margin: 20px 0 40px 0;
+}
+
+#hours {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+}
